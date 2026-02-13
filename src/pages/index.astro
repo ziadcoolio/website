@@ -10,7 +10,7 @@ import '../styles/global.css';
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="A playful Valentine page with a rotating name reveal and envelope letter animation."
+      content="Valentine page"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +21,7 @@ import '../styles/global.css';
     <title>Happy Valentine's</title>
   </head>
   <body>
-    <video id="bg-video" class="bg-video" playsinline muted loop preload="metadata" aria-hidden="true">
+    <video id="bg-video" class="bg-video" playsinline muted preload="metadata" aria-hidden="true">
       <source src="roses_falling.mp4" type="video/mp4" />
     </video>
 
@@ -56,29 +56,34 @@ import '../styles/global.css';
         </h1>
 
         <p class="mx-auto mt-7 max-w-2xl text-[clamp(1rem,2.5vw,1.4rem)] text-[color-mix(in_hsl,var(--ink)_82%,white)]">
-          Since we are not in the same country to celebrate today... I built this for you.
+          Since I can't be there to give you flowers in person... I built this for you.
         </p>
 
         <div class="letter-stage mx-auto w-full max-w-xl">
           <article id="letter-card" class="letter-card" aria-live="polite">
             <h2 class="mb-4 text-center text-3xl font-handwritten font-semibold tracking-wide text-[var(--ink)]">
-              My Letter For You
+              A Letter For Kainat 
             </h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>I remember you said you use the name 'Sara' because of the numerology...</p>
+            <p>But I think your real name is also perfect.</p>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-              only five centuries,
+              Most guys promise to give their girl the world.</br>
+              But for you, the world isn't enough.
             </p>
             <p>
-              but also the leap into electronic typesetting,
-              remaining essentially unchanged.
-              It was popularised in the 1960s with
+              You deserve the Universe.</br>
+              You deserve <b>Kainat.</b>
             </p>
             <p>
-              the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              You aren't just the prettiest person I know. You are smart, hardworking, and kind.</br>
+                Sometimes, it feels like I'm describing someone who can't possibly be real...
             </p>
+            <p>
+              But look in the mirror, and you will see it too.
+            </p>
+            <p>
+              You are amazing. <b>Never forget that</b>.
+            </p> 
           </article>
 
           <div id="open-letter-shell" class="envelope-shell">

@@ -90,6 +90,7 @@ body.gradient-shift {
 }
 
 ::selection {
+  background: #ffc7d9;
   background: color-mix(in hsl, var(--accent) 30%, white);
 }
 
