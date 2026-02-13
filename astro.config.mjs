@@ -10,7 +10,7 @@ const isUserOrOrgSite = Boolean(
 );
 
 const site = process.env.SITE ?? (owner ? `https://${owner}.github.io` : 'https://example.com');
-const base = isGithubActions && repo && !isUserOrOrgSite ? `/${repo}` : '/';
+const base = isGithubActions && repo && !isUserOrOrgSite ? `/${repo}/` : '/';
 
 export default defineConfig({
   site,
