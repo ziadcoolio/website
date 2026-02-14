@@ -7,7 +7,7 @@
 }
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --bg-a: #ff809f;
   --bg-b: #ffc2d5;
   --bg-c: #ffdbe6;
@@ -77,7 +77,7 @@ body {
 }
 
 html {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 html,
@@ -127,7 +127,7 @@ body.gradient-shift {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    color-scheme: light;
+    color-scheme: dark;
     --bg-a: #ff809f;
     --bg-b: #ffc2d5;
     --bg-c: #ffdbe6;
@@ -143,6 +143,10 @@ body.gradient-shift {
   body {
     background-color: #ffc2d5 !important;
     color: #3a1d2e !important;
+  }
+
+  html {
+    color-scheme: dark;
   }
 
   body {
