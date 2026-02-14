@@ -141,6 +141,26 @@ import '../styles/global.css';
         }, 900);
       };
 
+      const syncBackgroundMedia = () => {
+        const isLetterOpen = letterCard?.classList.contains('letter-open') ?? false;
+        const isKainatTheme = names[currentIndex]?.theme === 'kainat';
+        const shouldShowVideo = isLetterOpen && !isKainatTheme;
+
+        document.body.classList.toggle('video-bg-active', shouldShowVideo);
+        if (!backgroundVideo) {
+          return;
+        }
+
+        if (shouldShowVideo) {
+          backgroundVideo.currentTime = 0;
+          backgroundVideo.play().catch(() => {});
+          return;
+        }
+
+        backgroundVideo.pause();
+        backgroundVideo.currentTime = 0;
+      };
+
       const applyName = (nextIndex) => {
         currentIndex = nextIndex % names.length;
         const nextName = names[currentIndex];
@@ -156,6 +176,7 @@ import '../styles/global.css';
           nameToggle.textContent = nextName.label;
           root.setAttribute('data-theme', nextName.theme);
           pulseGradient();
+          syncBackgroundMedia();
 
           nameToggle.classList.remove('name-out');
           nameToggle.classList.add('name-in');
@@ -206,19 +227,7 @@ import '../styles/global.css';
           openLetterLabel.textContent = isOpen ? 'close' : 'open me';
         }
 
-        document.body.classList.toggle('video-bg-active', isOpen);
-        if (!backgroundVideo) {
-          return;
-        }
-
-        if (isOpen) {
-          backgroundVideo.currentTime = 0;
-          backgroundVideo.play().catch(() => {});
-          return;
-        }
-
-        backgroundVideo.pause();
-        backgroundVideo.currentTime = 0;
+        syncBackgroundMedia();
       });
     </script>
   </body>
@@ -268,6 +277,16 @@ import '../styles/global.css';
     gap: clamp(0.7rem, 2vh, 1.4rem);
     padding-block: clamp(0.3rem, 1.5vh, 1rem);
     z-index: 2;
+  }
+
+  :global(:root[data-theme='kainat']) .hero-content > h1 {
+    color: #f7efff !important;
+    text-shadow: 0 6px 20px rgba(7, 2, 18, 0.62);
+  }
+
+  :global(:root[data-theme='kainat']) .hero-content > p {
+    color: #ebdfff !important;
+    text-shadow: 0 3px 14px rgba(7, 2, 18, 0.58);
   }
 
   .nemo-corner {
