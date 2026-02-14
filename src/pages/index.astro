@@ -143,8 +143,7 @@ import '../styles/global.css';
 
       const syncBackgroundMedia = () => {
         const isLetterOpen = letterCard?.classList.contains('letter-open') ?? false;
-        const isKainatTheme = names[currentIndex]?.theme === 'kainat';
-        const shouldShowVideo = isLetterOpen && !isKainatTheme;
+        const shouldShowVideo = isLetterOpen;
 
         document.body.classList.toggle('video-bg-active', shouldShowVideo);
         if (!backgroundVideo) {

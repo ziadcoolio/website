@@ -106,13 +106,6 @@ body {
   animation: none;
 }
 
-:root[data-theme='sara'] body {
-  background:
-    linear-gradient(145deg, rgba(255, 210, 226, 0.78) 0%, rgba(255, 188, 214, 0.74) 100%),
-    url('/bg_pattern.jpg') left top / 280px 280px repeat;
-  animation: none;
-}
-
 body.gradient-shift {
   filter: saturate(1.08);
 }
